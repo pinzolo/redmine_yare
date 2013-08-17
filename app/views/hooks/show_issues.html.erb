@@ -1,0 +1,21 @@
+<%# coding: utf-8 %>
+<div id="yare" title="<%= l(:yare_dialog_title) %>">
+  <ul>
+    <% issues.each do |issue| %>
+      <li class="yare_issue"><%= link_to issue.id, issue_path(issue) %> : <%= issue.subject %></li>
+    <% end %>
+  </ul>
+</div>
+<script>
+$("#yare").dialog({
+  modal: true,
+  buttons: {
+    "OK": function() {
+      $(this).dialog("close");
+    }
+  },
+  height: "auto",
+  width: "500px"
+});
+</script>
+
