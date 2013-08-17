@@ -1,8 +1,12 @@
+# coding: utf-8
+require 'redmine'
+require_dependency 'yare/show_issues_listner'
+
 Redmine::Plugin.register :redmine_yare do
-  name 'Redmine Yare plugin'
-  author 'Author name'
-  description 'This is a plugin for Redmine'
+  name 'redmine_yare'
+  author 'pinzolo'
+  description 'redmine_yare is plugin for Redmine'
   version '0.0.1'
-  url 'http://example.com/path/to/plugin'
-  author_url 'http://example.com/about'
+  url 'https://github.com/pinzolo/redmine_yare'
+  author_url 'https://github.com/pinzolo'
 end
