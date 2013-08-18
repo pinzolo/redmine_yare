@@ -1,6 +1,6 @@
 # coding: utf-8
 module Yare
-  class ShowIssuesListner < Redmine::Hook::ViewListener
+  class ShowIssuesListener < Redmine::Hook::ViewListener
     def view_layouts_base_body_bottom(context = {})
       return nil unless User.current.logged?
 

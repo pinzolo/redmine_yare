@@ -1,6 +1,6 @@
 # coding: utf-8
 require 'redmine'
-require_dependency 'yare/show_issues_listner'
+require_dependency 'yare/show_issues_listener'
 
 Redmine::Plugin.register :redmine_yare do
   name 'redmine_yare'
