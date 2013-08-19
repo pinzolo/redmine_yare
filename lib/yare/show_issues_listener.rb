@@ -7,7 +7,7 @@ module Yare
       issues = Issue.includes(:status).where(:assigned_to_id => User.current.id, :due_date => Date.today).delete_if { |issue| issue.closed? }
       return nil if issues.empty?
 
-      context[:controller].render_to_string("hooks/show_issues", :locals => { :issues => issues }, :layout => false)
+      context[:controller].render_to_string("hooks/show_issues", :locals => context.merge(:issues => issues), :layout => false)
     end
   end
 end
